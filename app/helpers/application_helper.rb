@@ -7,17 +7,15 @@ module ApplicationHelper
 		else
 			"#{base_title} | #{@title}"
 		end
+	end	
+
+	def header_active
+		{@title => "active"}
 	end
 
-	def classes
-		if @title == "Home"
-			return {:home => "active", :contact => "", :about => ""}
-		end
-		if @title == "Contact"
-			return {:home => "", :contact => "active", :about => ""}
-		end		
-		if @title == "About"
-			return {:home => "", :contact => "", :about => "active"}
+	def header_addon
+		if not (["Home", "Contact", "About"].include?(@title))		
+			return link_to @title, home_path
 		end
 	end
 end

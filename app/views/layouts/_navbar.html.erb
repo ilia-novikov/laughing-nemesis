@@ -7,14 +7,15 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="brand" href="/pages/home">Manager of e-books</a>
+				<%= link_to "Manager of e-books", home_path, :class=>"brand" %>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li class=<%= classes[:home] %>><a href="/pages/home">Home</a></li>
-						<li class=<%= classes[:about] %>><a href="/pages/about">About</a></li>
-						<li class=<%= classes[:contact] %>><a href="/pages/contact">Contact</a></li>
+						<li class=<%= header_active["Home"].to_s %>><%= link_to "Home", home_path %></li>
+						<li class=<%= header_active["About"].to_s %>><%= link_to "About", about_path %></li>
+						<li class=<%= header_active["Contact"].to_s %>><%= link_to "Contact", contact_path %></li>
+						<li class="active"><%= header_addon %></li>
 					</ul>
-				</div><!--/.nav-collapse -->
+				</div>
 				<form class="navbar-search pull-right">
 					<input type="text" class="search-query" placeholder="Search">
 				</form>

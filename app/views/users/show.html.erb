@@ -1,1 +1,10 @@
-<%= @user.name %>, <%= @user.email %>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12" style="border: 2px solid #333333">
+			<h1>
+				<%= gravatar_image_tag @user.email, :class => "img-circle" %>
+				<%= @user.name %>
+			</h1>
+		</div>
+	</div>
+</div>

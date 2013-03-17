@@ -37,3 +37,4 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug'
+gem 'gravatar_image_tag'

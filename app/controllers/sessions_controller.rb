@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		if params[:name] == "sign_in"
+		if params[:commit] == "Sign in"
 			user = User.authenticate(params[:session][:email],
 				params[:session][:password])
 			if user.nil?

@@ -13,12 +13,6 @@ module ApplicationHelper
 		{@title => "active"}
 	end
 
-	def header_addon
-		if not (["Home", "Contact", "About"].include?(@title))		
-			return link_to @title, home_path
-		end
-	end
-
 	def error_class(string)
 		if not @user.errors[string].blank?
 			return "error"

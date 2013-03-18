@@ -13,7 +13,11 @@
 						<li class=<%= header_active["Home"].to_s %>><%= link_to "Home", home_path %></li>
 						<li class=<%= header_active["About"].to_s %>><%= link_to "About", about_path %></li>
 						<li class=<%= header_active["Contact"].to_s %>><%= link_to "Contact", contact_path %></li>
-						<li class="active"><%= header_addon %></li>
+						<% if signed_in? %>
+						<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+						<% else %>
+						<li class=<%= header_active["Sign in"].to_s %>><%= link_to "Sign in", signin_path %></li>
+						<% end %>
 					</ul>
 				</div>
 				<form class="navbar-search pull-right">

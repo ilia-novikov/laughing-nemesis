@@ -148,7 +148,7 @@
 			"file": "app/views/users/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 178,
+				"buffer_size": 427,
 				"line_ending": "Unix",
 				"name": "<ul>"
 			}
@@ -267,7 +267,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -411,15 +411,15 @@
 					"file": "app/views/users/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 178,
+						"buffer_size": 427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								122,
-								122
+								203,
+								203
 							]
 						],
 						"settings":

@@ -1,9 +1,24 @@
 <% if User.any? %>
-<ul>
-	<% User.all.each do |user| %>
-	<li><%= "Name:#{user.name} Email:#{user.email}" %></li>
-	<% end %>
-</ul>
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Profile</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% User.all.each do |user| %>
+		<tr>
+			<td><%= user.id %></td>
+			<td><%= user.name %></td>
+			<td><%= user.email %></td>
+			<td><%= link_to "Link", user_path(user) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
 <% else %>
 <h1>No users were found</h1>
 <% end %>

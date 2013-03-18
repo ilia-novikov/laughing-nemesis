@@ -1,0 +1,26 @@
+<h1 class="text-info">Sign in</h1>
+<% if not flash.now[:error].nil? %>
+<div class="alert alert-error">
+	<%= flash.now[:error] %>
+</div>
+<% end %>
+<%= form_for(:session, :url => sessions_path, :html => {:class => "form-horizontal"}) do |f| %>
+<div class="control-group">
+	<%= f.label :email, :class => "control-label"  %>
+	<div class="controls">
+		<%= f.text_field :email, :placeholder => "Email" %>
+	</div>
+</div>
+<div class="control-group">
+	<%= f.label :password, :class => "control-label" %>
+	<div class="controls">
+		<%= f.password_field :password, :placeholder => "Password" %>
+	</div>
+</div>
+<div class	="control-group">
+	<div class="controls">
+		<%= f.submit "Sign in", :class => "btn btn-primary", :name => "sign_in" %>
+		<%= f.submit "Sign up", :class => "btn", :name => "sign_up" %>
+	</div>
+</div>
+<% end %>

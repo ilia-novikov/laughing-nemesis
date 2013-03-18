@@ -18,4 +18,17 @@ module ApplicationHelper
 			return link_to @title, home_path
 		end
 	end
+
+	def error_class(string)
+		if not @user.errors[string].blank?
+			return "error"
+		end
+	end
+
+	def get_error(string)
+		if not @user.errors[string].blank?
+			message = @user.errors[string][0]
+			return @user.errors.full_message(string, message)
+		end
+	end
 end

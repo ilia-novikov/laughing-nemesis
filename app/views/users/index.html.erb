@@ -1,0 +1,9 @@
+<% if User.any? %>
+<ul>
+	<% User.all.each do |user| %>
+	<li><%= "Name:#{user.name} Email:#{user.email}" %></li>
+	<% end %>
+</ul>
+<% else %>
+<h1>No users were found</h1>
+<% end %>

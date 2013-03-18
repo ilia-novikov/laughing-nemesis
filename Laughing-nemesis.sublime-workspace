@@ -1,0 +1,555 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pa",
+				"password"
+			],
+			[
+				"nam",
+				"name"
+			],
+			[
+				"erro",
+				"error_class"
+			],
+			[
+				"na",
+				"name"
+			],
+			[
+				"err",
+				"errors"
+			],
+			[
+				"pass",
+				"password_confirmation"
+			],
+			[
+				"st",
+				"string"
+			],
+			[
+				"hea",
+				"header"
+			],
+			[
+				"A",
+				"About"
+			],
+			[
+				"C",
+				"Contact"
+			],
+			[
+				"H",
+				"Home"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"co",
+				"contact"
+			],
+			[
+				"ind",
+				"index"
+			],
+			[
+				"a",
+				"append"
+			],
+			[
+				"br",
+				"break"
+			],
+			[
+				"t",
+				"text"
+			],
+			[
+				"c",
+				"click"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"p",
+				"parent"
+			],
+			[
+				"l",
+				"link	Tag"
+			],
+			[
+				"b",
+				"body	Tag"
+			],
+			[
+				"s",
+				"script"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 361,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/new.html.erb",
+			"settings":
+			{
+				"buffer_size": 1263,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/helpers/application_helper.rb",
+			"settings":
+			{
+				"buffer_size": 616,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/shared/_error_messages.html.erb",
+			"settings":
+			{
+				"buffer_size": 275,
+				"line_ending": "Unix",
+				"name": "<% if @user.errors.any? %>"
+			}
+		},
+		{
+			"file": "app/controllers/users_controller.rb",
+			"settings":
+			{
+				"buffer_size": 373,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 178,
+				"line_ending": "Unix",
+				"name": "<ul>"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 1012,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 226,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/novikov/Code/RoR/laughing-nemesis/app/assets/stylesheets/custom.css",
+		"/home/novikov/Code/RoR/laughing-nemesis/Laughing-nemesis.sublime-project",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/helpers/application_helper.rb",
+		"/home/novikov/Code/Web/index.html",
+		"/home/novikov/Code/RoR/laughing-nemesis/config/routes.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/users/show.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/models/user.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/controllers/users_controller.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/users/new.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/layouts/_navbar.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/layouts/application.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/db/migrate/20130317095003_add_email_uniqueness_index.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/db/migrate/20130317093305_create_users.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/controllers/application_controller.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/helpers/users_helper.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/models/micropost.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/db/migrate/20130316184146_add_email_uniqueness_index.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/controllers/pages_controller.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/layouts/_stylefix.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/pages/home.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/pages/contact.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/pages/about.html.erb",
+		"/home/novikov/Documents/Java Projects/UI Wrapper/instrument-list",
+		"/home/novikov/Code/RoR/blog/app/views/posts/new.html.erb",
+		"/home/novikov/Code/RoR/blog/config/routes.rb",
+		"/home/novikov/Code/RoR/blog/app/views/welcome/index.html.erb",
+		"/home/novikov/Code/RoR/blog/app/controllers/posts_controller.rb",
+		"/home/novikov/Documents/Java Projects/UI Wrapper/src/Wrapper.java",
+		"/home/novikov/Documents/Java Projects/UI Wrapper/src/Wrapper.class",
+		"/home/novikov/Documents/Java Projects/UI Wrapper/src/Launcher.java",
+		"/home/novikov/Documents/Java Projects/UI Wrapper/src/[cmd",
+		"/home/novikov/www/js/tools.js",
+		"/home/novikov/www/index.html",
+		"/home/novikov/Documents/Note.java",
+		"/home/novikov/Downloads/Tone.java",
+		"/home/novikov/www/css/style.css",
+		"/home/novikov/www/navigation.html",
+		"/home/novikov/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"src"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								21
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/users/new.html.erb",
+					"settings":
+					{
+						"buffer_size": 1263,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								744,
+								744
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/helpers/application_helper.rb",
+					"settings":
+					{
+						"buffer_size": 616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								186,
+								186
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/shared/_error_messages.html.erb",
+					"settings":
+					{
+						"buffer_size": 275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27,
+								27
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<% if @user.errors.any? %>",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/users_controller.rb",
+					"settings":
+					{
+						"buffer_size": 373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								369,
+								369
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/users/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 178,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								122,
+								122
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<ul>",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 1012,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/users/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 226,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								76
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 142.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,11 @@
+{
+
+	"folders":
+	[
+		{
+			"folder_exclude_patterns": ["doc", "lib", "log", "script", "spec", "test", "tmp", "vendor"],
+			"file_exclude_patterns": [".*", "*.lock", "*.markdown", "*.sublime*"],
+			"path": "/home/novikov/Code/RoR/laughing-nemesis"
+		}
+	]
+}

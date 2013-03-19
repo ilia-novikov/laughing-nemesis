@@ -16,16 +16,43 @@
 					</ul>
 					<ul class="nav pull-right">
 						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile <b class="caret"></b></a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<% if signed_in? %>
+								<%= current_user.name %> 
+								<% else %>
+								Account
+								<% end %>
+								<b class="caret"></b>
+							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="padding: 5px">
 								<% if signed_in? %>
-								<li style="text-align: center">
-									<h6><%= gravatar_image_tag current_user.email, :class => "img-circle", :style => "width: 30px" %> <%= current_user.name %></h6>
+								<li class="text-left">
+									<!-- <%= gravatar_image_tag current_user.email, :class => "img-circle small-sized" %> -->
+									<a href=<%= user_path(current_user) %>>
+										<%= get_placeholder(:small) %> Profile
+									</a>
 								</li>
-								<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+								<li class="text-left">
+									<a href=<%= edit_user_path(current_user) %>>
+										<%= get_icon(:settings) %> Settings
+									</a>
+								</li>
+								<li class="text-left">
+									<a href=<%= signout_path %>>
+										<%= get_icon(:access) %> Sign out
+									</a>
+								</li>
 								<% else %>
-								<li><%= link_to "Sign in", signin_path %></li>
-								<li><%= link_to "Sign up", signup_path %></li>
+								<li class="text-left">
+									<a href=<%= signin_path %>>
+										<%= get_icon(:access) %> Sign in
+									</a>
+								</li>
+								<li class="text-left">
+									<a href=<%= signup_path %>>
+										<%= get_icon(:user_add) %> Sign up
+									</a>
+								</li>
 								<% end %>					
 							</ul>
 						</li>

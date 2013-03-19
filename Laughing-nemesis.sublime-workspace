@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"st",
+				"style"
+			],
+			[
+				"l",
+				"li	Tag"
+			],
+			[
 				"ma",
 				"margin-left"
 			],
@@ -34,10 +42,6 @@
 			[
 				"pass",
 				"password_confirmation"
-			],
-			[
-				"st",
-				"string"
 			],
 			[
 				"hea",
@@ -96,10 +100,6 @@
 				"parent"
 			],
 			[
-				"l",
-				"link	Tag"
-			],
-			[
 				"b",
 				"body	Tag"
 			],
@@ -112,18 +112,42 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/layouts/application.html.erb",
+			"file": "app/views/layouts/_navbar.html.erb",
 			"settings":
 			{
-				"buffer_size": 410,
+				"buffer_size": 1549,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/layouts/_navbar.html.erb",
+			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 1165,
+				"buffer_size": 419,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/users_controller.rb",
+			"settings":
+			{
+				"buffer_size": 513,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/edit.html.erb",
+			"settings":
+			{
+				"buffer_size": 1321,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/custom.css",
+			"settings":
+			{
+				"buffer_size": 32,
 				"line_ending": "Unix"
 			}
 		}
@@ -152,15 +176,20 @@
 	},
 	"file_history":
 	[
+		"/home/novikov/Code/RoR/laughing-nemesis/app/assets/stylesheets/bootstrap.min.css",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/layouts/application.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/controllers/sessions_controller.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/sessions/new.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/assets/javascripts/utils.js",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/helpers/sessions_helper.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/helpers/pages_helper.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/assets/javascripts/sessions.js.coffee",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/assets/javascripts/application.js",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/views/layouts/_navbar.html.erb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/assets/stylesheets/custom.css",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/helpers/application_helper.rb",
-		"/home/novikov/Code/RoR/laughing-nemesis/app/helpers/sessions_helper.rb",
-		"/home/novikov/Code/RoR/laughing-nemesis/app/controllers/sessions_controller.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/controllers/users_controller.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/views/users/new.html.erb",
-		"/home/novikov/Code/RoR/laughing-nemesis/app/views/layouts/application.html.erb",
-		"/home/novikov/Code/RoR/laughing-nemesis/app/views/sessions/new.html.erb",
 		"/home/novikov/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/novikov/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/novikov/Code/RoR/laughing-nemesis/config/routes.rb",
@@ -232,28 +261,56 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layouts/application.html.erb",
+					"file": "app/views/layouts/_navbar.html.erb",
 					"settings":
 					{
-						"buffer_size": 410,
+						"buffer_size": 1549,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1540,
+								1540
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 125.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15,
+								15
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -262,19 +319,46 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app/views/layouts/_navbar.html.erb",
+					"buffer": 2,
+					"file": "app/controllers/users_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1165,
+						"buffer_size": 513,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								789,
-								789
+								503,
+								503
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 408.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/users/edit.html.erb",
+					"settings":
+					{
+						"buffer_size": 1321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
 							]
 						],
 						"settings":
@@ -282,7 +366,33 @@
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 92.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/stylesheets/custom.css",
+					"settings":
+					{
+						"buffer_size": 32,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10,
+								10
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},

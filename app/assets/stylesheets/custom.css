@@ -1,3 +1,19 @@
-h1.text-info {
+h1.shifted {
 	margin-left: 18%
+}
+
+img.middle-sized {
+	width: 100px
+}
+
+img.small-sized {
+	width: 30px
+}
+
+img.icon {
+	float: left;
+}
+
+.hidden {
+	display: none;
 }

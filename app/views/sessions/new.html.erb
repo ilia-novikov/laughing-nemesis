@@ -1,7 +1,12 @@
-<h1 class="text-info">Sign in</h1>
+<h1 class="shifted">Sign in</h1>
 <% if not flash.now[:error].nil? %>
 <div class="alert alert-error">
-	<%= flash.now[:error] %>
+	<strong>Error!</strong> <%= flash.now[:error] %>
+</div>
+<% end %>
+<% if not flash.now[:notice].nil? %>
+<div class="alert">
+	<strong>Warning!</strong> <%= flash.now[:notice] %>
 </div>
 <% end %>
 <%= form_for(:session, :url => sessions_path, :html => {:class => "form-horizontal"}) do |f| %>

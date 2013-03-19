@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	before_filter :authenticate, :only => [:edit, :update, :index]
+
 	def show
 		@user = User.find(params[:id])
 		@title = @user.name
@@ -23,5 +25,16 @@ class UsersController < ApplicationController
 
 	def index
 		@title = "Users list"		
+	end
+
+	def edit
+		@user = User.find(params[:id])
+		@title = "Settings"
+	end
+
+	private
+
+	def authenticate
+		deny_access unless signed_in?		
 	end
 end

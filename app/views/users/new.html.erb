@@ -1,9 +1,10 @@
 <h1 class="shifted">Sign up</h1>
+<%= render "layouts/warnings" %>
 <%= form_for(@user, :html => {:class => "form-horizontal"}) do |f| %>
 <div class="control-group <%= error_class(:name) %>">
 	<%= f.label :name, :class => "control-label" %>
 	<div class="controls">
-		<%= f.text_field :name, :placeholder => "Name" %>
+		<%= f.text_field :name, :class => "test-blank test-length", :placeholder => "Name" %>
 		<span class="help-inline"><%= get_error(:name) %></span>
 	</div>
 </div>
@@ -11,9 +12,9 @@
 	<%= f.label :email, :class => "control-label"  %>
 	<div class="controls">
 		<% if params[:email].nil? %>
-		<%= f.text_field :email, :placeholder => "Email" %>
+		<%= f.text_field :email, :class => "test-blank test-length", :placeholder => "Email" %>
 		<% else %>
-		<%= f.text_field :email, :placeholder => "Email", :value => params[:email] %>
+		<%= f.text_field :email, :class => "test-blank test-length", :placeholder => "Email", :value => params[:email] %>
 		<% end %>
 		<span class="help-inline"><%= get_error(:email) %></span>
 	</div>
@@ -21,14 +22,16 @@
 <div class="control-group <%= error_class(:password) %>">
 	<%= f.label :password, :class => "control-label" %>
 	<div class="controls">
-		<%= f.password_field :password, :placeholder => "Password" %>
+		<%= f.password_field :password, :class => "test-blank test-length show-hide", :placeholder => "Password" %>
+		<%= image_tag("icons/show.png", :class => "small-sized show-switch") %>
 		<span class="help-inline"><%= get_error(:password) %></span>
 	</div>
 </div>
 <div class="control-group">
 	<%= f.label :password_confirmation, "Confirmation", :class => "control-label" %>
 	<div class="controls">
-		<%= f.password_field :password_confirmation, :placeholder => "Confirm password" %>
+		<%= f.password_field :password_confirmation, :class => "test-blank test-length test-confirm show-hide", :placeholder => "Confirm password" %>
+		<span class="help-inline"></span>
 	</div>
 </div>
 <div class	="control-group">

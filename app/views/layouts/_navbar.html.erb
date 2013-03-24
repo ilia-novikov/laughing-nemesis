@@ -1,5 +1,5 @@
 <header>
-	<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -7,12 +7,18 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<%= link_to "Manager of e-books", home_path, :class=>"brand" %>
+				<a href=<%= home_path %> class="brand">
+					<%= get_icon(:book) %> Manager of e-books
+				</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li class=<%= header_active["Home"].to_s %>><%= link_to "Home", home_path %></li>
 						<li class=<%= header_active["About"].to_s %>><%= link_to "About", about_path %></li>
 						<li class=<%= header_active["Contact"].to_s %>><%= link_to "Contact", contact_path %></li>
+						
+						<% if signed_in? and current_user.get_role == "admin" %>
+						<li class=<%= header_active["Users"].to_s %>><%= link_to "Users", users_path %></li>
+						<% end %>
 					</ul>
 					<ul class="nav pull-right">
 						<li class="dropdown">
@@ -29,7 +35,7 @@
 								<li class="text-left">
 									<!-- <%= gravatar_image_tag current_user.email, :class => "img-circle small-sized" %> -->
 									<a href=<%= user_path(current_user) %>>
-										<%= get_placeholder(:small) %> Profile
+										<%= get_icon(:user) %> Profile
 									</a>
 								</li>
 								<li class="text-left">

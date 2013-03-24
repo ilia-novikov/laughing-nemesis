@@ -1,24 +1,48 @@
 <% if User.any? %>
-<table class="table table-hover">
-	<thead>
-		<tr>
-			<th>#</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Profile</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% User.all.each do |user| %>
-		<tr>
-			<td><%= user.id %></td>
-			<td><%= user.name %></td>
-			<td><%= user.email %></td>
-			<td><%= link_to "Link", user_path(user) %></td>
-		</tr>
-		<% end %>
-	</tbody>
-</table>
+<div class="well">
+	<table class="table sortable">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Actions</th>
+				<% if current_user.get_role == "admin" %>
+				<th>Role</th>
+				<% end %>
+			</tr>
+		</thead>
+		<tbody>
+			<% User.all.each do |user| %>
+			<tr>
+				<td><%= user.id %></td>
+				<td><%= user.name %></td>
+				<td><%= user.email %></td>
+				<td>
+					<%= link_to "Profile", user_path(user), :class => "btn btn-primary btn-mini one-line" %>
+					<% if current_user.get_role == "admin" %>
+					<span class="one-line">&nbsp&nbsp</span>
+					<%= button_to "Delete", user, :method => :delete, :title => "Delete #{user.name}", :class => "btn btn-danger btn-mini one-line" %>
+					<% end %>
+				</td>
+				<% if current_user.get_role == "admin" %>
+				<td>
+					<% if user.get_role == "admin" %>
+					<span class="label label-important upper">
+						<%= user.get_role %>
+					</span>				
+					<% else %>
+					<span class="label label-info upper">
+						<%= user.get_role %>
+					</span>			
+					<% end %>
+				</td>
+				<% end %>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
 <% else %>
 <h1>No users were found</h1>
 <% end %>

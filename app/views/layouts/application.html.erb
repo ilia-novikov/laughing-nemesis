@@ -6,13 +6,13 @@
 	<%= stylesheet_link_tag 'custom', :media => "screen" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>
-	<%= render 'layouts/stylefix' %>
+	<!-- I've loaded in <%= Time.now - @start_time %> seconds -->
 </head>
 <body>
-	<%= render 'layouts/navbar' %>
-
-	<%= yield %>
-
-	<!-- <%= debug(params) if Rails.env.development? %> -->
+	<%= render "layouts/navbar" %>
+	<%= render "layouts/warnings" %>
+	<div id="page">
+		<%= yield %>
+	</div>
 </body>
 </html>

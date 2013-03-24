@@ -17,14 +17,16 @@
 <div class="control-group <%= error_class(:password) %>">
 	<%= f.label :password, :class => "control-label" %>
 	<div class="controls">
-		<%= f.password_field :password, :placeholder => "Password" %>
+		<%= f.password_field :password, :class => "test-blank test-length show-hide", :placeholder => "Password" %>
+		<%= image_tag("icons/show.png", :class => "small-sized show-switch") %>
 		<span class="help-inline"><%= get_error(:password) %></span>
 	</div>
 </div>
 <div class="control-group">
 	<%= f.label :password_confirmation, "Confirmation", :class => "control-label" %>
 	<div class="controls">
-		<%= f.password_field :password_confirmation, :placeholder => "Confirm password" %>
+		<%= f.password_field :password_confirmation, :class => "test-blank test-length test-confirm show-hide", :placeholder => "Confirm password" %>
+		<span class="help-inline"></span>
 	</div>
 </div>
 <div class	="control-group">

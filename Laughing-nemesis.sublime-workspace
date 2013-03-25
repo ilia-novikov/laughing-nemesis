@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"dra",
+				"drawCarret"
+			],
+			[
+				"dr",
+				"drawBall"
+			],
+			[
+				"o",
+				"offsetY"
+			],
+			[
+				"co",
+				"context"
+			],
+			[
+				"can",
+				"canvas"
+			],
+			[
 				"la",
 				"layouts"
 			],
@@ -86,10 +106,6 @@
 			[
 				"ge",
 				"getGroup"
-			],
-			[
-				"co",
-				"content"
 			],
 			[
 				"in",
@@ -227,15 +243,48 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/controllers/pages_controller.rb",
+			"settings":
+			{
+				"buffer_size": 249,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/pages/testing.html.erb",
+			"settings":
+			{
+				"buffer_size": 105,
+				"line_ending": "Unix",
+				"name": "<canvas>"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/main.js.coffee",
+			"settings":
+			{
+				"buffer_size": 3012,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 474,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 33.0,
 		"selected_items":
 		[
 		],
-		"width": 575.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -252,6 +301,11 @@
 	},
 	"file_history":
 	[
+		"/home/novikov/Code/RoR/laughing-nemesis/config/routes.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/layouts/_navbar.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/controllers/pages_controller.rb",
+		"/home/novikov/Code/RoR/laughing-nemesis/app/views/pages/home.html.erb",
+		"/home/novikov/Code/RoR/laughing-nemesis/Laughing-nemesis.sublime-project",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/views/layouts/application.html.erb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/views/errors/not_found.html.erb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/assets/stylesheets/custom.css",
@@ -264,8 +318,6 @@
 		"/home/novikov/Code/RoR/laughing-nemesis/app/views/users/show.html.erb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/views/sessions/new.html.erb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/views/users/edit.html.erb",
-		"/home/novikov/Code/RoR/laughing-nemesis/app/views/layouts/_navbar.html.erb",
-		"/home/novikov/Code/RoR/laughing-nemesis/app/views/pages/home.html.erb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/models/user.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/db/migrate/20130323122212_add_role_to_users.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/views/users/new.html.erb",
@@ -273,7 +325,6 @@
 		"/home/novikov/Code/RoR/laughing-nemesis/app/assets/images/errors/404.jpg",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/controllers/errors_controller.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/views/pages/about.html.erb",
-		"/home/novikov/Code/RoR/laughing-nemesis/config/routes.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/config/application.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/config/locales/en.yml",
 		"/home/novikov/Code/RoR/laughing-nemesis/config/locales/ru.yml",
@@ -294,13 +345,11 @@
 		"/home/novikov/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/helpers/users_helper.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/views/shared/_error_messages.html.erb",
-		"/home/novikov/Code/RoR/laughing-nemesis/Laughing-nemesis.sublime-project",
 		"/home/novikov/Code/Web/index.html",
 		"/home/novikov/Code/RoR/laughing-nemesis/db/migrate/20130317095003_add_email_uniqueness_index.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/db/migrate/20130317093305_create_users.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/app/models/micropost.rb",
 		"/home/novikov/Code/RoR/laughing-nemesis/db/migrate/20130316184146_add_email_uniqueness_index.rb",
-		"/home/novikov/Code/RoR/laughing-nemesis/app/controllers/pages_controller.rb",
 		"/home/novikov/Documents/Java Projects/UI Wrapper/instrument-list",
 		"/home/novikov/Code/RoR/blog/app/views/posts/new.html.erb",
 		"/home/novikov/Code/RoR/blog/config/routes.rb",
@@ -352,8 +401,118 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/controllers/pages_controller.rb",
+					"settings":
+					{
+						"buffer_size": 249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								75
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/pages/testing.html.erb",
+					"settings":
+					{
+						"buffer_size": 105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								77,
+								77
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<canvas>",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/javascripts/main.js.coffee",
+					"settings":
+					{
+						"buffer_size": 3012,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2892,
+								2892
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1265.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

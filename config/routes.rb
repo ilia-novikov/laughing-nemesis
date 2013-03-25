@@ -2,7 +2,7 @@ FirstApp::Application.routes.draw do
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
 
-  root :to => "pages#home"
+  root :to => 'pages#home'
 
   match '/home', :to => 'pages#home'
 
@@ -20,6 +20,8 @@ FirstApp::Application.routes.draw do
 
   match '/404', :to => 'errors#not_found'
   
+  match '/testing',    :to => 'pages#testing'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

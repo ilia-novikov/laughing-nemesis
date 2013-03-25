@@ -32,6 +32,7 @@ $().ready ->
 		testConfirm e.target
 	$(".show-switch").click (e) ->
 		passwordSwitch e.target
+	operateCanvas()
 	$(".dropdown-toggle").dropdown()
 	console.debug "Page loaded"
 
@@ -78,3 +79,45 @@ passwordSwitch = (object) ->
 		else
 			$(field).attr "type", "password"
 			$(object).attr "src", "/assets/icons/show.png"
+operateCanvas = ->
+	width = $("canvas").width()
+	height = $("canvas").height()
+	drawBoxing = ->
+		$("canvas").drawRect(
+			{strokeStyle: "#DD4814",
+			fillStyle: "#333333"
+			strokeWidth: 3,
+			x: 0, 
+			y: 0, 
+			width: width, 
+			height: height, 
+			cornerRadius: 10, 
+			fromCenter: false})
+		$("canvas").drawLine(
+			{strokeStyle: "#DD4814",
+			strokeWidth: 6,
+			x1: 0, y1: 390,
+			x2: width, y2: 390})
+	drawBall = (x, y) ->
+		$("canvas").drawRect(
+			{fillStyle: "DD4814", 
+			x: x, 
+			y: y, 
+			width: 30, 
+			height: 30,
+			cornerRadius: 30})
+	drawCarret = (x, y) ->
+		$("canvas").drawRect(
+			{fillStyle: "#DD4814", 
+			x: x, 
+			y: y, 
+			width: 90, 
+			height: 25,
+			cornerRadius: 10})
+		
+	drawBoxing()
+	$("canvas").mousemove (e) ->
+		$("canvas").clearCanvas()
+		drawBoxing()
+		drawBall 100, 100
+		drawCarret e.offsetX, 390

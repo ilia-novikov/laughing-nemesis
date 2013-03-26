@@ -16,7 +16,6 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(params[:user])
 		if @user.save
-			UserNotify.welcome(@user).deliver
 			sign_in @user
 			flash[:success] = "Welcome to the Ruby testing!"
 			redirect_to @user

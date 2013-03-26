@@ -19,8 +19,10 @@ FirstApp::Application.routes.draw do
   match '/signout', :to => 'sessions#destroy'
 
   match '/404', :to => 'errors#not_found'
-  
+
   match '/testing',    :to => 'pages#testing'
+
+  match '/books',    :to => 'pages#books'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

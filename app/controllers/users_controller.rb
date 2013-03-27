@@ -10,44 +10,44 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new(params[:user])
-		@title = "Sign up"
+		@title = 'Sign up'
 	end
 
 	def create
 		@user = User.new(params[:user])
 		if @user.save
 			sign_in @user
-			flash[:success] = "Welcome to the Ruby testing!"
+			flash[:success] = 'Welcome to the Ruby testing!'
 			redirect_to @user
 		else
-			@title = "Sign up"
+			@title = 'Sign up'
 			render 'new'
 		end
 	end
 
 	def index
-		@title = "Users list"		
-	end
+		@title = 'Users list'
+  end
 
 	def edit
 		@user = User.find(params[:id])
-		@title = "Settings"
+		@title = 'Settings'
 	end
 
 	def update
 		@user = User.find(params[:id])
 		if @user.update_attributes(params[:user])
-			flash[:success] = "Profile updated."
+			flash[:success] = 'Profile updated.'
 			redirect_to @user
 		else
-			@title = "Edit user"
+			@title = 'Edit user'
 			render 'edit'
 		end
 	end
 
 	def destroy
 		User.find(params[:id]).destroy
-		flash[:success] = "User destroyed."
+		flash[:success] = 'User destroyed.'
 		redirect_to users_path
 	end
 
@@ -58,7 +58,7 @@ class UsersController < ApplicationController
 	end
 
 	def administrator
-		redirect_to(root_path) unless current_user.role == "admin"
+		redirect_to(root_path) unless current_user.role == 'admin'
 	end
 
 	def correct_user

@@ -3,27 +3,30 @@ class PagesController < ApplicationController
   require 'json'
 
   def home
-    @title = "Home"
+    @title = 'Home'
   end
 
   def contact
-    @title = "Contact"
+    @title = 'Contact'
   end
 
   def about
-    @title = "About"
+    @title = 'About'
   end
 
   def help
-    @title = "Help"
+    @title = 'Help'
   end
 
   def testing
-    @title = "Testing"
+    @title = 'Testing'
   end
 
   def books
-    @title = "Books"
-    @list = ActiveSupport::JSON.decode(open("https://www.googleapis.com/books/v1/volumes?q=#{params[:query]}").read)
+    @title = 'Books'
+    unless params[:books].nil?
+      query = URI.encode params[:books][:query]
+      @list = ActiveSupport::JSON.decode(open("https://www.googleapis.com/books/v1/volumes?q=#{query}").read)
+    end
   end
 end

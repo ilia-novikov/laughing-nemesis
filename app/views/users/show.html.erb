@@ -2,10 +2,10 @@
 	<div class="row-fluid">
 		<div class="span12 well">
 			<h1>
-				<%= gravatar_image_tag @user.email, :class => "img-circle", :alt => @user.name %>
+				<%= gravatar_image_tag @user.email, :class => 'img-circle', :alt => @user.name %>
 				<%= get_placeholder(:medium) %>
 				<%= @user.name %>
-				<% if @user.get_role == "admin" %>
+				<% if @user.get_role == 'admin' %>
 				<span class="label label-important upper">
 					<%= @user.get_role %>
 				</span>				

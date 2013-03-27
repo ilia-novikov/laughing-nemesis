@@ -23,8 +23,9 @@ module SessionsHelper
 	end
 
 	def deny_access
-		flash[:error] = "Please sign in to access this page."
-		redirect_to signin_path
+		flash[:error] = 'Please sign in to access this page.'
+    #noinspection RubyResolve
+    redirect_to signin_path
 	end
 
 	private

@@ -1,24 +1,25 @@
 <h1 class="shifted">Sign in</h1>
-<%= form_for(:session, :url => sessions_path, :html => {:class => "form-horizontal"}) do |f| %>
+<%= #noinspection RubyResolve
+    form_for(:session, :url => sessions_path, :html => {:class => 'form-horizontal'}) do |f| %>
 <div class="control-group">
-	<%= f.label :email, :class => "control-label"  %>
+	<%= f.label :email, :class => 'control-label' %>
 	<div class="controls">
-		<%= f.text_field :email, :class => "test-blank test-length", :placeholder => "Email", :autofocus => "autofocus" %>
+		<%= f.text_field :email, :class => 'test-blank test-length', :placeholder => 'Email', :autofocus => 'autofocus' %>
 		<span class="help-inline"></span>
 	</div>
 </div>
 <div class="control-group">
-	<%= f.label :password, :class => "control-label" %>
+	<%= f.label :password, :class => 'control-label' %>
 	<div class="controls">
-		<%= f.password_field :password, :class => "test-blank test-length show-hide", :placeholder => "Password" %>
-		<%= image_tag("icons/show.png", :class => "small-sized show-switch") %>
+		<%= f.password_field :password, :class => 'test-blank test-length show-hide', :placeholder => 'Password' %>
+		<%= image_tag('icons/show.png', :class => 'small-sized show-switch') %>
 		<span class="help-inline"></span>
 	</div>
 </div>
 <div class	="control-group">
 	<div class="controls">
-		<%= f.submit "Sign in", :class => "btn btn-primary" %>
-		<%= f.submit "Sign up", :class => "btn" %>
+		<%= f.submit 'Sign in', :class => 'btn btn-primary' %>
+		<%= f.submit 'Sign up', :class => 'btn' %>
 	</div>
 </div>
 <% end %>

@@ -7,7 +7,7 @@
 				<th>Name</th>
 				<th>Email</th>
 				<th>Actions</th>
-				<% if current_user.get_role == "admin" %>
+				<% if current_user.get_role == 'admin' %>
 				<th>Role</th>
 				<% end %>
 			</tr>
@@ -19,15 +19,15 @@
 				<td><%= user.name %></td>
 				<td><%= user.email %></td>
 				<td>
-					<%= link_to "Profile", user_path(user), :class => "btn btn-primary btn-mini one-line" %>
-					<% if current_user.get_role == "admin" %>
+					<%= link_to 'Profile', user_path(user), :class => 'btn btn-primary btn-mini one-line' %>
+					<% if current_user.get_role == 'admin' %>
 					<span class="one-line">&nbsp&nbsp</span>
-					<%= button_to "Delete", user, :method => :delete, :title => "Delete #{user.name}", :class => "btn btn-danger btn-mini one-line" %>
+					<%= button_to 'Delete', user, :method => :delete, :title => "Delete #{user.name}", :class => 'btn btn-danger btn-mini one-line' %>
 					<% end %>
 				</td>
-				<% if current_user.get_role == "admin" %>
+				<% if current_user.get_role == 'admin' %>
 				<td>
-					<% if user.get_role == "admin" %>
+					<% if user.get_role == 'admin' %>
 					<span class="label label-important upper">
 						<%= user.get_role %>
 					</span>				

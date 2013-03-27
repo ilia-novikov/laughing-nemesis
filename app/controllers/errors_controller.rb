@@ -1,5 +1,5 @@
 class ErrorsController < ApplicationController
 	def not_found
-		@title = "Oops"
+		@title = 'Oops'
 	end
 end

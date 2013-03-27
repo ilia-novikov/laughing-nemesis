@@ -1,5 +1,7 @@
 class Field
-  constructor: (@object, @type) ->
+  constructor: (object, type) ->
+    @object = object
+    @type = type
   buttonChange: (oldClass, newClass) ->
     button = $(".btn-#{oldClass}")
     button.removeClass "btn-#{oldClass}"

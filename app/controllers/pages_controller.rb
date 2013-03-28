@@ -26,7 +26,14 @@ class PagesController < ApplicationController
     @title = 'Books'
     unless params[:books].nil?
       query = URI.encode params[:books][:query]
-      @list = ActiveSupport::JSON.decode(open("https://www.googleapis.com/books/v1/volumes?q=#{query}").read)
+      unless query.blank?
+        begin
+          @list = ActiveSupport::JSON.decode(open("https://www.googleapis.com/books/v1/volumes?q=#{query}").read)
+        rescue
+          flash.now[:error] = 'Google Books API error, please try again!'
+          @list = nil
+        end
+      end
     end
   end
 end

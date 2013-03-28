@@ -1,40 +1,44 @@
 body {
-	background-color: #AEA79F;
+    background-color: #AEA79F;
 }
 
 h1.shifted {
-	margin-left: 18%
+    margin-left: 18%
 }
 
 img.middle-sized {
-	width: 100px
+    width: 100px
 }
 
 img.small-sized {
-	width: 20px
+    width: 20px
 }
 
 img.icon {
-	float: left;
+    float: left;
 }
 
 .hidden {
-	display: none;
+    display: none;
 }
 
 #page {
-	width: 90%;
-	margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 span.upper {
-	vertical-align: super;
+    vertical-align: super;
 }
 
 .show-switch {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .one-line {
-	float: left;
+    float: left;
+}
+
+td.medium {
+    width: 60%;
 }

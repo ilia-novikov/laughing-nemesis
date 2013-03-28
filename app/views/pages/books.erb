@@ -1,29 +1,40 @@
 <div class="well">
-  <%= form_for(:books, :url => '/books', :html => {:class => 'form-search'}) do |f| %>
+  <%= form_for(:books, :url => '/books', :html => {:class => 'form-search text-center'}) do |f| %>
       <%= f.text_field :query, :class => 'input-large search-query', :placeholder => 'Search...', :autofocus => 'autofocus' %>
-      <%= f.submit 'Search', :class => 'btn btn-primary' %>
+      <%= f.submit 'Search', :class => 'btn' %>
   <% end %>
   <% unless @list.nil? %>
       <table class="table sortable">
         <thead>
         <tr>
-          <th>Image</th>
-          <th>Title</th>
-          <th>Authors</th>
+          <th>Preview</th>
+          <th>Info</th>
           <th>Actions</th>
         </tr>
         </thead>
         <tbody>
         <% @list['items'].each do |item| %>
+            <% book = Book.new(item) %>
             <tr>
-              <td><%= book_cover item %></td>
-              <td><%= book_title item %></td>
-              <td>
-                <ul>
-                  <% (book_authors item).each do |author| %>
-                      <li><%= author %></li>
-                  <% end %>
-                </ul>
+              <td><%= image_tag book.cover, :class => 'img-rounded' %></td>
+              <td class="medium">
+                <strong>ID: </strong><%= book.id %>
+                <br>
+                <strong>Title: </strong><%= book.get('title') %>
+                <br>
+                <strong>Authors: </strong>
+                <% unless book.get('authors').nil? %>
+                    <ul>
+                      <% book.get('authors').each do |author| %>
+                          <li><%= author %></li>
+                      <% end %>
+                    </ul>
+                <% end %>
+                <strong>Published: </strong><%= book.get('publishedDate') %>
+                <br>
+                <em class="expandable">
+                  <%= book.get('description') %>
+                </em>
               </td>
               <td>No actions</td>
             </tr>

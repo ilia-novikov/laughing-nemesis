@@ -33,9 +33,9 @@ class User < ActiveRecord::Base
   end
 
   def get_option (key)
-    unless options.nil?
+    unless self.options.nil?
       options_hash = {}
-      options.split(',').each { |elem| options_hash[elem.split('=')[0]] = elem.split('=')[1] }
+      self.options.split(',').each { |elem| options_hash[elem.split('=')[0]] = elem.split('=')[1] }
       if options_hash.include?(key)
         options_hash[key]
       end
@@ -43,16 +43,20 @@ class User < ActiveRecord::Base
   end
 
   def set_option (key, value)
-    if options.nil?
+    if self.options.nil?
       options = "#{key}=#{value}"
       update_attribute('options', options)
     else
       options_hash = {}
-      options.split(',').each { |elem| options_hash[elem.split('=')[0]] = elem.split('=')[1] }
+      self.options.split(',').each { |elem| options_hash[elem.split('=')[0]] = elem.split('=')[1] }
       options_hash[key] = value
-      options = options.map { |k, v| "#{k}=#{v}" }.join(',')
+      options = options_hash.map { |k, v| "#{k}=#{v}" }.join(',')
       update_attribute('options', options)
     end
+  end
+
+  def clear_options
+    update_attribute('options', nil)
   end
 
   private

@@ -1,0 +1,23 @@
+ru:
+  hello: "Привет, мир!"
+  brand: "E-books list"
+  google_auth: "https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=754054970160.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Foauth&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=booklist"
+  errors:
+    google:
+      auth: "Ошибка при подключении аккаунта Google"
+      books: "Ошибка при обращении к Google Books"
+  pages:
+    home:
+      welcome: "Добро пожаловать!"
+      add_to_list: "Прочитал книгу? Добавь ее в список!"
+      share_with_friends: "Читаешь книгу? Расскажи друзьям!"
+      find_it_out: "Хочешь почитать? Найди книгу тут!"
+      easy_to_use: "Легко использовать!"
+      totally_free: "И все это абсолютно бесплатно!"
+  system:
+    sign_in: "Войти"
+    sign_up: "Присоедиться"
+  oauth:
+    connecting_to: "Подключаюсь к"
+    sign_in: "Войти при помощи"
+    sign_up: "Зарегистрироваться при помощи"

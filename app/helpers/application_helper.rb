@@ -33,5 +33,7 @@ module ApplicationHelper
 
 	def get_icon(type)
 		image_tag("icons/#{type}.png", :class => 'small-sized')
-	end
+  end
+
+
 end

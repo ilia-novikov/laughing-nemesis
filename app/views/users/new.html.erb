@@ -1,6 +1,16 @@
 <h1 class="shifted">Sign up</h1>
 <%= render 'layouts/warnings' %>
+<% if signed_in? %>
+    <script type="text/javascript">
+        window.location.href = '/';
+    </script>
+<% end %>
 <%= form_for(@user, :html => {:class => 'form-horizontal'}) do |f| %>
+    <div class="control-group">
+      <div class="controls">
+        <a class="btn" href="<%= t('google_auth') %>"><%= t('oauth.sign_up') %> <span class="google">Google</span></a>
+      </div>
+    </div>
     <div class="control-group <%= error_class(:name) %>">
       <%= f.label :name, :class => 'control-label' %>
       <div class="controls">

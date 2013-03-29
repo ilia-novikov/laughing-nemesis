@@ -1,6 +1,17 @@
 <h1 class="shifted">Sign in</h1>
-<%= #noinspection RubyResolve
+<% if signed_in? %>
+    <script type="text/javascript">
+        window.location.href = '/';
+    </script>
+<% end %>
+
+<%=
     form_for(:session, :url => sessions_path, :html => {:class => 'form-horizontal'}) do |f| %>
+    <div class="control-group">
+      <div class="controls">
+        <a class="btn" href="<%= t('google_auth') %>"><%= t('oauth.sign_in') %> <span class="google">Google</span></a>
+      </div>
+    </div>
     <div class="control-group">
       <%= f.label :email, :class => 'control-label' %>
       <div class="controls">

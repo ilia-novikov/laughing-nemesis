@@ -1,0 +1,48 @@
+<div class="well">
+  <%= form_for(:books, :url => '/books', :html => {:class => 'form-search text-center'}) do |f| %>
+      <%= f.text_field :query, :class => 'input-large search-query', :placeholder => 'Search...', :autofocus => 'autofocus' %>
+      <%= f.submit 'Search', :class => 'btn' %>
+  <% end %>
+  <% unless params[:books].nil?
+       @list = get_list(params[:books][:query])
+     end %>
+  <% unless @list.nil? %>
+      <table class="table sortable">
+        <thead>
+        <tr>
+          <th>Preview</th>
+          <th>Info</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @list['items'].each do |item| %>
+            <% book = Book.new(item) %>
+            <tr>
+              <td><%= image_tag book.cover, :class => 'img-rounded' %></td>
+              <td class="medium">
+                <strong>ID: </strong><%= book.id %>
+                <br>
+                <strong>Title: </strong><%= book.get('title') %>
+                <br>
+                <strong>Authors: </strong>
+                <% unless book.get('authors').nil? %>
+                    <ul>
+                      <% book.get('authors').each do |author| %>
+                          <li><%= author %></li>
+                      <% end %>
+                    </ul>
+                <% end %>
+                <strong>Published: </strong><%= book.get('publishedDate') %>
+                <br>
+                <em class="expandable">
+                  <%= book.get('description') %>
+                </em>
+              </td>
+              <td>No actions</td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+  <% end %>
+</div>

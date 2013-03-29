@@ -1,16 +1,14 @@
 <div class="hero-unit">
-  <h1>Welcome!</h1>
+  <h1><%= t('pages.home.welcome') %></h1>
   <ul>
-    <li>You've read a book? Add it to the list!</li>
-    <li>You're reading? Share book with your friends!</li>
-    <li>Want to read, but you don't know what? Find it out!</li>
-    <li>Easy to use!</li>
-    <li>And totally free!</li>
+    <li><%= t('pages.home.add_to_list') %></li>
+    <li><%= t('pages.home.share_with_friends') %></li>
+    <li><%= t('pages.home.find_it_out') %></li>
+    <li><%= t('pages.home.easy_to_use') %></li>
+    <li><%= t('pages.home.totally_free') %></li>
   </ul>
   <div class="btn-group">
-    <a class="btn btn-primary btn-large" href=<%= #noinspection RubyResolve
-                                                  signin_path %>>Sign in</a>
-    <a class="btn btn-primary btn-large" href=<%= #noinspection RubyResolve
-                                                  signup_path %>>Sign up</a>
+    <%= link_to t('system.sign_in'), signin_path, :class => 'btn btn-primary btn-large' %>
+    <%= link_to t('system.sign_up'), signup_path, :class => 'btn btn-primary btn-large' %>
   </div>
 </div>

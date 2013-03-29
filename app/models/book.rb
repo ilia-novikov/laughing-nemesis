@@ -1,4 +1,7 @@
 class Book
+  require 'open-uri'
+  require 'json'
+
   attr_accessor :book
 
   def initialize(item)
@@ -23,6 +26,4 @@ class Book
       @book[option]
     end
   end
-
-
 end

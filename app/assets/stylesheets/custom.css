@@ -42,3 +42,14 @@ span.upper {
 td.medium {
     width: 60%;
 }
+
+.info-block {
+    display: block;
+    margin: 15% auto;
+    width: 60%;
+    text-align: center;
+}
+
+.google {
+    color: #F90101;
+}

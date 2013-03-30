@@ -37,7 +37,7 @@ class Oauth
   def get_session_params
     salt_prefix = 'PSRel2jsk51bK43MsZ8y'
     salt_postfix = 'm6Pm938H815GJx6fr5j5'
-    password = Digest::SHA2.hexdigest("#{salt_prefix}#{self.get('id')}#{salt_postfix}").to_s[0..20]
-    {:name => self.get('name'), :email => self.get('email'), :password => password, :password_confirmation => password}
+    password = Digest::SHA2.hexdigest("#{salt_prefix}#{self.get('id')}#{salt_postfix}").to_s[0..30]
+    {:name => self.get('name'), :email => self.get('email'), :password => password, :password_confirmation => password, :options => 'oauth=true'}
   end
 end

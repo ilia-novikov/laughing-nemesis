@@ -25,4 +25,19 @@
       <h1>Stuff</h1>
     </div>
   </div>
+  <% if current_user.role == 'admin' %>
+      <div class="row-fluid">
+        <div class="span12 well">
+          <h1>Administration tools</h1>
+          <% unless @user.get_options.nil? %>
+              <h4>Options:</h4>
+              <ul>
+                <% @user.get_options.each do |key, value| %>
+                    <li><strong>Key </strong><%= key %> with <strong>value </strong><%= value %></li>
+                <% end %>
+              </ul>
+          <% end %>
+        </div>
+      </div>
+  <% end %>
 </div>

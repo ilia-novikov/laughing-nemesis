@@ -1,14 +1,14 @@
 class SessionsController < ApplicationController
   def new
-    @title = 'Sign in'
+    @title = t('sessions.title')
   end
 
   def create
-    if params[:commit] == 'Sign in'
+    if params[:commit] == t('sessions.sign_in')
       user = User.authenticate(params[:session][:email], params[:session][:password])
       if user.nil?
-        flash.now[:error] = 'Invalid email/password combination.'
-        @title = 'Sign in'
+        flash.now[:error] = t('errors.wrong_password')
+        @title = t('sessions.title')
         render 'new'
       else
         sign_in user

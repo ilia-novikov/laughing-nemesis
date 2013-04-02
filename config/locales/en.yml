@@ -1,23 +1,61 @@
 en:
-  hello: "Hello world"
-  brand: "E-books list"
+  brand: "BookList"
   google_auth: "https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=754054970160.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Foauth&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=booklist"
   errors:
     google:
       auth: "Error connecting to Google account"
       books: "Error accessing Google Books"
+    not_found:
+      title: "Oops!"
+    wrong_password: "Invalid email/password combination"
   pages:
     home:
+      title: "Home"
       welcome: "Welcome!"
       add_to_list: "You've read a book? Add it to the list!"
       share_with_friends: "You're reading? Share book with your friends!"
       find_it_out: "Want to read, but you don't know what? Find it out!"
       easy_to_use: "Easy to use!"
       totally_free: "And totally free!"
-  system:
-    sign_in: "Sign in"
-    sign_up: "Sign up"
+    contact:
+      title: "Contacts"
+    about:
+      title: "About"
+    help:
+      title: "Help"
+    oauth:
+      title: "Signing in..."
+  books:
+    search:
+      title: "Search books"
+      actions:
+        added: "Book %{title} has been added"
+        removed: "Book %{title} has been removed"
   oauth:
     sign_in: "Sign in with"
     sign_up: "Sign up with"
     connecting_to: "Connecting to"
+  users:
+    messages:
+      welcome: "Welcome to the Booklist!"
+      updated: "Profile updated"
+      destroyed: "User destroyed"
+    new:
+      title: "Sign up"
+    index:
+      title: "Users list"
+    edit:
+      title: "Edit profile"
+    show:
+      no_books: "You have no items. Add?"
+      books_heading: "Books"
+  sessions:
+    title: "Sign in"
+    sign_in: "Sign in"
+  navbar:
+    home: "Home"
+    users: "Users"
+    account: "Account"
+    profile: "Profile"
+    settings: "Settings"
+    sign_out: "Sign out"

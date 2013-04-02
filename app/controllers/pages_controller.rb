@@ -1,33 +1,35 @@
 class PagesController < ApplicationController
 
   def home
-    @title = 'Home'
+    @title = t('pages.home.title')
   end
 
   def contact
-    @title = 'Contact'
+    @title = t('pages.contact.title')
   end
 
   def about
-    @title = 'About'
+    @title = t('pages.about.title')
   end
 
   def help
-    @title = 'Help'
+    @title = t('pages.help.title')
   end
 
 
   def oauth
-    @title = 'Signing in...'
+    @title = t('pages.oauth.title')
     #render :layout => '_info'
     if params[:error].nil? and params[:state] == 'booklist'
       user_params = Oauth.new(params[:code]).get_session_params
       user = User.authenticate(user_params[:email], user_params[:password])
       if user.nil?
         user = User.new(user_params)
-        if user.save
+        list = List.new()
+        list.user = user
+        if user.save and list.save
           sign_in user
-          flash[:success] = 'Welcome to the Ruby testing!'
+          flash[:success] = t('users.messages.welcome')
           redirect_to user
         end
       else

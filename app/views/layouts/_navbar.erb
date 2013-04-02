@@ -7,23 +7,17 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="<%= #noinspection RubyResolve
-                     home_path %>" class="brand">
-          <%= get_icon(:book) %> Manager of e-books
+        <a href="<%= home_path %>" class="brand">
+          <%= get_icon(:book) %> <%= t('brand') %>
         </a>
 
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class=<%= header_active['Home'].to_s %>><%= #noinspection RubyResolve
-                                                            link_to 'Home', home_path %></li>
-            <li class=<%= header_active['About'].to_s %>><%= #noinspection RubyResolve
-                                                             link_to 'About', about_path %></li>
-            <li class=<%= header_active['Contact'].to_s %>><%= #noinspection RubyResolve
-                                                               link_to 'Contact', contact_path %></li>
-
+            <li class=<%= header_active['Home'].to_s %>><%= link_to t('pages.home.title'), home_path %></li>
+            <li class=<%= header_active['About'].to_s %>><%= link_to t('pages.about.title'), about_path %></li>
+            <li class=<%= header_active['Contact'].to_s %>><%= link_to t('pages.contact.title'), contact_path %></li>
             <% if signed_in? and current_user.get_role == 'admin' %>
-                <li class=<%= header_active['Users'].to_s %>><%= #noinspection RubyResolve
-                                                                 link_to 'Users', users_path %></li>
+                <li class=<%= header_active['Users'].to_s %>><%= link_to t('navbar.users'), users_path %></li>
             <% end %>
           </ul>
           <ul class="nav pull-right">
@@ -32,7 +26,7 @@
                 <% if signed_in? %>
                     <%= current_user.name %>
                 <% else %>
-                    Account
+                    <%= t('navbar.account') %>
                 <% end %>
                 <b class="caret"></b>
               </a>
@@ -40,33 +34,28 @@
                 <% if signed_in? %>
                     <li class="text-left">
                       <!-- <%= gravatar_image_tag current_user.email, :class => 'img-circle small-sized' %> -->
-                      <a href=<%= #noinspection RubyResolve
-                                  user_path(current_user) %>>
-                        <%= get_icon(:user) %> Profile
+                      <a href=<%= user_path(current_user) %>>
+                        <%= get_icon(:user) %> <%= t('navbar.profile') %>
                       </a>
                     </li>
                     <li class="text-left">
-                      <a href=<%= #noinspection RubyResolve
-                                  edit_user_path(current_user) %>>
-                        <%= get_icon(:settings) %> Settings
+                      <a href="<%= edit_user_path(current_user) %>">
+                        <%= get_icon(:settings) %> <%= t('navbar.settings') %>
                       </a>
                     </li>
                     <li class="text-left">
-                      <a href=<%= #noinspection RubyResolve
-                                  signout_path %>>
-                        <%= get_icon(:access) %> Sign out
+                      <a href=<%= signout_path %>>
+                        <%= get_icon(:access) %> <%= t('navbar.sign_out') %>
                       </a>
                     </li>
                 <% else %>
                     <li class="text-left">
-                      <a href=<%= #noinspection RubyResolve
-                                  signin_path %>>
+                      <a href=<%= signin_path %>>
                         <%= get_icon(:access) %> Sign in
                       </a>
                     </li>
                     <li class="text-left">
-                      <a href=<%= #noinspection RubyResolve
-                                  signup_path %>>
+                      <a href=<%= signup_path %>>
                         <%= get_icon(:user_add) %> Sign up
                       </a>
                     </li>

@@ -53,3 +53,8 @@ td.medium {
 .google {
     color: #F90101;
 }
+
+div.scrollable {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}

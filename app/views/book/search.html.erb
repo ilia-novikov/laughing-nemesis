@@ -1,10 +1,10 @@
 <div class="well">
-  <%= form_for(:books, :url => '/books', :html => {:class => 'form-search text-center'}) do |f| %>
+  <%= form_for(:search, :url => '/books', :html => {:class => 'form-search text-center'}) do |f| %>
       <%= f.text_field :query, :class => 'input-large search-query', :placeholder => 'Search...', :autofocus => 'autofocus' %>
       <%= f.submit 'Search', :class => 'btn' %>
   <% end %>
-  <% unless params[:books].nil?
-       @list = get_list(params[:books][:query])
+  <% unless params[:search].nil?
+       @list = get_list(params[:search][:query])
      end %>
   <% unless @list.nil? %>
       <table class="table sortable">
@@ -21,7 +21,7 @@
             <tr>
               <td><%= image_tag book.cover, :class => 'img-rounded' %></td>
               <td class="medium">
-                <strong>ID: </strong><%= book.id %>
+                <strong>ID: </strong><%= book.get_id %>
                 <br>
                 <strong>Title: </strong><%= book.get('title') %>
                 <br>
@@ -39,7 +39,23 @@
                   <%= book.get('description') %>
                 </em>
               </td>
-              <td>No actions</td>
+              <td>
+                <% if signed_in? %>
+                    <%= form_for(:modification, :url => '/books', :html => {:class => 'form-search text-center'}) do |f| %>
+                        <%= f.hidden_field :book_id, :value => book.get_id %>
+                        <% if current_user.list.has_book?(book.get_id) %>
+                            <%= f.hidden_field :book_action, :value => 'remove' %>
+                            <% button_text = 'Delete from my books' %>
+                        <% else %>
+                            <%= f.hidden_field :book_action, :value => 'add' %>
+                            <% button_text = 'Add to my books' %>
+                        <% end %>
+                        <%= f.submit button_text, :class => 'btn' %>
+                    <% end %>
+                <% else %>
+                    No actions
+                <% end %>
+              </td>
             </tr>
         <% end %>
         </tbody>

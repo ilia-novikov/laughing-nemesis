@@ -3,7 +3,6 @@
     <div class="span12 well">
       <h1>
         <%= gravatar_image_tag @user.email, :class => 'img-circle', :alt => @user.name %>
-        <%= get_placeholder(:medium) %>
         <%= @user.name %>
         <% if @user.get_role == 'admin' %>
 				<span class="label label-important upper">
@@ -18,10 +17,33 @@
     </div>
   </div>
   <div class="row-fluid">
-    <div class="span4 well">
-      <h1>Books</h1>
-    </div>
     <div class="span8 well">
+      <h1><%= t('users.show.books_heading') %></h1>
+      <% if @user.list.has_books? %>
+          <div class="scrollable">
+            <% @user.list.get_books.each do |book| %>
+                <% provider = Book.new(get_book(book)) %>
+                <%= image_tag provider.cover, :class => 'img-rounded' %>
+                <%= provider.get('title') %> <br>
+                <%= provider.get('authors') %> <br>
+                <%= form_for(:modification, :url => '/books', :html => {:class => 'form-search text-center'}) do |f| %>
+                    <%= f.hidden_field :book_id, :value => book %>
+                    <%= f.hidden_field :book_action, :value => 'remove' %>
+                    <%= f.hidden_field :redirect, :value => user_path %>
+                    <% button_text = 'Delete' %>
+                    <%= f.submit button_text, :class => 'btn' %>
+                <% end %>
+            <% end %>
+          </div>
+      <% else %>
+          <%= t('users.show.no_books') %>
+          <%= form_for(:search, :url => '/books', :html => {:class => 'form-search text-center'}) do |f| %>
+              <%= f.text_field :query, :class => 'input-medium search-query', :placeholder => 'Search...', :autofocus => 'autofocus' %>
+              <%= f.submit 'Search', :class => 'btn' %>
+          <% end %>
+      <% end %>
+    </div>
+    <div class="span4 well">
       <h1>Stuff</h1>
     </div>
   </div>

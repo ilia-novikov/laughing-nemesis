@@ -1,11 +1,13 @@
 ru:
-  hello: "Привет, мир!"
-  brand: "E-books list"
+  brand: "BookList"
   google_auth: "https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=754054970160.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Foauth&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=booklist"
   errors:
     google:
       auth: "Ошибка при подключении аккаунта Google"
       books: "Ошибка при обращении к Google Books"
+    not_found:
+      title: "Упс!"
+    wrong_password: "Неверный логин или пароль"
   pages:
     home:
       welcome: "Добро пожаловать!"
@@ -14,6 +16,15 @@ ru:
       find_it_out: "Хочешь почитать? Найди книгу тут!"
       easy_to_use: "Легко использовать!"
       totally_free: "И все это абсолютно бесплатно!"
+      title: "Главная"
+    contact:
+      title: "Связь"
+    about:
+      title: "О нас"
+    help:
+      title: "Помощь"
+    oauth:
+      title: "Подключаюсь..."
   system:
     sign_in: "Войти"
     sign_up: "Присоедиться"
@@ -21,3 +32,32 @@ ru:
     connecting_to: "Подключаюсь к"
     sign_in: "Войти при помощи"
     sign_up: "Зарегистрироваться при помощи"
+  books:
+    search:
+      title: "Поиск книг"
+      actions:
+        added: "Книга %{title} была добавлена в ваш список"
+        removed: "Книга %{title} была удалена из вашего списка"
+  users:
+    messages:
+      welcome: "Добро пожаловать в Booklist!"
+      updated: "Профиль обновлен"
+      destroyed: "Пользователь удален"
+    new:
+     title: "Регистрация"
+    index:
+      title: "Список пользователей"
+    edit:
+      title: "Редактировать профиль"
+    show:
+      no_books: "У вас пока нет книг. Добавить?"
+      books_heading: "Книги"
+  sessions:
+    title: "Вход"
+    sign_in: "Войти"
+  navbar:
+    users: "Пользователи"
+    account: "Аккаунт"
+    profile: "Профиль"
+    settings: "Настройки"
+    sign_out: "Выйти"
